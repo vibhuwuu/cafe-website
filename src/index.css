@@ -9,24 +9,6 @@ body {
   color: #2d2118;
 }
 
-nav {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  padding: 20px 40px;
-  background: #3b2418;
-}
-
-nav h2 {
-  margin-right: auto;
-  color: white;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
 main {
   max-width: 1100px;
   margin: auto;
@@ -41,11 +23,26 @@ h1 {
   font-size: 48px;
 }
 
+@media (max-width: 600px) {
+  h1 {
+    font-size: 36px;
+  }
+}
+
 button {
   padding: 12px 20px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  font-size: 16px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #d49a6a;
+  outline-offset: 3px;
 }
 .menu-grid {
   display: grid;
@@ -63,7 +60,13 @@ button {
 .menu-card h2 {
   margin-top: 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
   .menu-grid {
     grid-template-columns: 1fr;
   }
@@ -108,4 +111,50 @@ form textarea {
 form textarea {
   min-height: 150px;
   resize: vertical;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  background: #3b2418;
+}
+
+.logo {
+  margin-right: auto;
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
 }
