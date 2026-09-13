@@ -84,3 +84,28 @@ button {
   background: #3b2418;
   color: white;
 }
+form {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+form input,
+form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
+}
+
+form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
