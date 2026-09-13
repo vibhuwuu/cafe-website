@@ -68,3 +68,19 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.filter-buttons button {
+  border: 1px solid #3b2418;
+  background: white;
+}
+
+.filter-buttons button.active {
+  background: #3b2418;
+  color: white;
+}

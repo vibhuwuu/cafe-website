@@ -13,12 +13,24 @@ const menu = [
   },
   {
     id: 3,
+    name: "Espresso",
+    category: "Coffee",
+    price: 120
+  },
+  {
+    id: 4,
     name: "Masala Chai",
     category: "Tea",
     price: 100
   },
   {
-    id: 4,
+    id: 5,
+    name: "Green Tea",
+    category: "Tea",
+    price: 120
+  },
+  {
+    id: 6,
     name: "Chocolate Cake",
     category: "Dessert",
     price: 220

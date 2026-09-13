@@ -1,12 +1,14 @@
+import {Link} from "react-router-dom";
+
 function Navbar() {
   return (
     <nav>
       <h2>Bean & Brew</h2>
 
-      <li><a href="/">Home</a></li>
-      <li><a href="/menu">Menu</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/contact">Contact</a></li>
+      <Link to="/">Home</Link>
+      <Link to="/menu">Menu</Link>
+      <Link to="/about">About</Link>
+      <Link to="/contact">Contact</Link>
     </nav>
   );
 }
