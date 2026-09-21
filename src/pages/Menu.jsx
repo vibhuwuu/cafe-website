@@ -6,7 +6,7 @@ import { CartContext } from "../context/CartContext.jsx";
 function Menu() {
   const [category, setCategory] = useState("All");
 
-  const { order, addToOrder } = useContext(CartContext);
+  const { order, increaseQuantity, decreaseQuantity, removeFromOrder } = useContext(CartContext);
 
   const filteredMenu =
     category === "All"
@@ -40,7 +40,6 @@ function Menu() {
           <MenuCard
             key={item.id}
             item={item}
-            addToOrder={addToOrder}
           />
         ))}
       </div>
@@ -48,9 +47,25 @@ function Menu() {
       <h2>Your Order</h2>
 
       {order.map((item, index) => (
-        <p key={index}>
-          {item.name} - ₹{item.price}
-        </p>
+        <div key={index}>
+          <p>
+            {item.name} - ₹{item.price}
+          </p>
+          <button onClick={() => decreaseQuantity(item.id)}>
+            −
+          </button>
+
+          <span> {item.quantity} </span>
+
+          <button onClick={() => increaseQuantity(item.id)}>
+            +
+          </button>
+              <button onClick={() => removeFromOrder(item.id)}>
+            Remove
+          </button>
+
+
+        </div>
       ))}
     </main>
   );

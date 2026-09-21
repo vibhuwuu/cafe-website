@@ -1,4 +1,9 @@
-function MenuCard({ item, addToOrder }) {
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
+
+function MenuCard({ item }) {
+  const { addToOrder } = useContext(CartContext);
+
   return (
     <article className="menu-card">
       <h2>{item.name}</h2>
